@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Board - DevLUp</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Using a classic deep red for Garnet
+                        'club-garnet': '#800000',
+                        // Using a bright, classic gold for accents
+                        'club-gold': '#FFD700',
+                        // A slightly softer, more readable gold for text
+                        'club-gold-text': '#facc15', // amber-400
+                    },
+                    fontFamily: {
+                        // Setting Inter as the default sans-serif font
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+    
+    <style>
+        /* Small style tweak for better dark-mode form controls if you add them later */
+        html {
+            color-scheme: light;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-700 font-sans antialiased">
+
+    <!-- =========== Header & Navigation =========== -->
+    <nav class="bg-club-garnet shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Club Logo/Name -->
+                <a href="index.html" class="text-2xl font-bold text-club-gold-text hover:text-club-gold transition-colors">
+                    DevLUp
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html#about" class="text-white hover:text-club-gold-text transition-colors">About</a>
+                    <a href="index.html#learn" class="text-white hover:text-club-gold-text transition-colors">Learn</a>
+                    <a href="index.html#projects" class="text-white hover:text-club-gold-text transition-colors">Projects</a>
+                    <a href="#" class="font-bold text-club-gold-text transition-colors">Past Board</a>
+                    <a href="index.html#join" class="bg-club-gold-text text-club-garnet font-bold px-4 py-2 rounded-md text-sm hover:bg-club-gold transition-all">
+                        Join Us
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white hover:text-club-gold-text focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-club-garnet bg-opacity-90">
+            <a href="index.html#about" class="block px-6 py-3 text-white hover:bg-black/20">About</a>
+            <a href="index.html#learn" class="block px-6 py-3 text-white hover:bg-black/20">Learn</a>
+            <a href="index.html#projects" class="block px-6 py-3 text-white hover:bg-black/20">Projects</a>
+            <a href="#" class="block px-6 py-3 font-bold text-club-gold-text hover:bg-black/20">Past Board</a>
+            <a href="index.html#join" class="block px-6 py-3 text-club-gold-text font-bold hover:bg-black/20">Join Us</a>
+        </div>
+    </nav>
+
+    <!-- =========== Main Content Section =========== -->
+    <main class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 text-center mb-4">
+                Club Leadership Archive
+            </h1>
+            <p class="text-center text-lg text-slate-700 mb-16 max-w-2xl mx-auto">
+                Celebrating the members who have dedicated their time to lead DevLUp.
+            </p>
+
+            <!-- Year 2024-2025 -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2 border-b-4 border-club-garnet pb-2">
+                    2024 - 2025
+                </h2>
+                <p class="text-club-gold-text font-semibold mb-6 text-lg">Current Board</p>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- Board Member Card -->
+                    <div class="bg-slate-100 p-4 rounded-lg shadow-md text-center">
+                        <h3 class="font-bold text-slate-900 text-lg">President</h3>
+                        <p class="text-slate-600">[President's Name]</p>
+                    </div>
+                    <!-- Board Member Card -->
+                    <div class="bg-slate-100 p-4 rounded-lg shadow-md text-center">
+                        <h3 class="font-bold text-slate-900 text-lg">Vice President</h3>
+                        <p class="text-slate-600">[VP's Name]</p>
+                    </div>
+                    <!-- Board Member Card -->
+                    <div class="bg-slate-100 p-4 rounded-lg shadow-md text-center">
+                        <h3 class="font-bold text-slate-900 text-lg">Secretary</h3>
+                        <p class="text-slate-600">[Secretary's Name]</p>
+                    </div>
+                    <!-- Board Member Card -->
+                    <div class="bg-slate-100 p-4 rounded-lg shadow-md text-center">
+                        <h3 class="font-bold text-slate-900 text-lg">Treasurer</h3>
+                        <p class="text-slate-600">[Treasurer's Name]</p>
+                    </div>
+                    <!-- Add more as needed -->
+                    <div class="bg-slate-100 p-4 rounded-lg shadow-md text-center">
+                        <h3 class="font-bold text-slate-900 text-lg">PR Manager</h3>
+                        <p class="text-slate-600">[PR's Name]</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Year 2023-2024 -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6 border-b-4 border-club-garnet pb-2">
+                    2023 - 2024
+                </h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- Board Member Card -->
+                    <div class="bg-slate-100 p-4 rounded-lg shadow-md text-center">
+                        <h3 class="font-bold text-slate-900 text-lg">President</h3>
+                        <p class="text-slate-600">[Past President's Name]</p>
+                    </div>
+                    <!-- Board Member Card -->
+                    <div class="bg-slate-100 p-4 rounded-lg shadow-md text-center">
+                        <h3 class="font-bold text-slate-900 text-lg">Vice President</h3>
+                        <p class="text-slate-600">[Past VP's Name]</p>
+                    </div>
+                    <!-- Board Member Card -->
+                    <div class="bg-slate-100 p-4 rounded-lg shadow-md text-center">
+                        <h3 class="font-bold text-slate-900 text-lg">Secretary</h3>
+                        <p class="text-slate-600">[Past Secretary's Name]</p>
+                    </div>
+                    <!-- Board Member Card -->
+                    <div class="bg-slate-100 p-4 rounded-lg shadow-md text-center">
+                        <h3 class="font-bold text-slate-900 text-lg">Treasurer</h3>
+                        <p class="text-slate-600">[Past Treasurer's Name]</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Year 2022-2023 -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6 border-b-4 border-club-garnet pb-2">
+                    2022 - 2023
+                </h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- Board Member Card -->
+                    <div class="bg-slate-100 p-4 rounded-lg shadow-md text-center">
+                        <h3 class="font-bold text-slate-900 text-lg">President</h3>
+                        <p class="text-slate-600">[Past President's Name]</p>
+                    </div>
+                    <!-- Board Member Card -->
+                    <div class="bg-slate-100 p-4 rounded-lg shadow-md text-center">
+                        <h3 class="font-bold text-slate-900 text-lg">Vice President</h3>
+                        <p class="text-slate-600">[Past VP's Name]</p>
+                    </div>
+                    <!-- Add more as needed -->
+                </div>
+            </section>
+
+        </div>
+    </main>
+    
+    <!-- =========== Footer =========== -->
+    <footer class="bg-club-garnet py-8">
+        <div class="container mx-auto px-6 text-center text-club-gold-text text-sm">
+            <p>&copy; 2025 DevLUp.</p>
+            <p>A student-run organization at Florida State University.</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+De
+            });
+        });
+    </script>
+
+</body>
+</html>
