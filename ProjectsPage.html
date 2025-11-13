@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - DevLUp</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // UPDATED: Using official FSU colors
+                        'club-garnet': '#782F40',
+                        'club-gold': '#CEB888',
+                        'club-gold-light': '#DFD1A7', // Gulf Sands - for better contrast
+                    },
+                    fontFamily: {
+                        // Setting Inter as the default sans-serif font
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <style>
+        /* Small style tweak for better dark-mode form controls to add them later */
+        html {
+            color-scheme: light;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-700 font-sans antialiased">
+
+    <!-- =========== Header & Navigation =========== -->
+    <nav class="bg-club-garnet shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Club Logo/Name -->
+                <a href="index.html" class="text-2xl font-bold text-club-gold-light hover:text-white transition-colors">
+                    DevLUp
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="DevLUpMainPage.html#about" class="text-white hover:text-club-gold-light transition-colors">About</a>
+                    <a href="DevLUpMainPage.html#learn" class="text-white hover:text-club-gold-light transition-colors">Learn</a>
+                    <a href="ProjectsPage.html#projects" class="text-white hover:text-club-gold-light transition-colors">Projects</a>
+                    <a href="BoardLegacy.html" class="font-bold text-club-gold-light transition-colors">Past Board</a>
+                    <a href="DevLUpMainPage.html#join" class="bg-club-gold-light text-club-garnet font-bold px-4 py-2 rounded-md text-sm hover:bg-white hover:text-club-garnet transition-all">
+                        Join Us
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white hover:text-club-gold-light focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-club-garnet bg-opacity-90">
+            <a href="DevLUpMainPage.html#about" class="block px-6 py-3 text-white hover:bg-black/20">About</a>
+            <a href="DevLUpMainPage.html#learn" class="block px-6 py-3 text-white hover:bg-black/20">Learn</a>
+            <a href="ProjectsPage.html#projects" class="block px-6 py-3 text-white hover:bg-black/20">Projects</a>
+            <a href="BoardLegacy.html" class="block px-6 py-3 font-bold text-club-gold-light hover:bg-black/20">Past Board</a>
+            <a href="DevLUpMainPage.html#join" class="block px-6 py-3 text-club-gold-light font-bold hover:bg-black/20">Join Us</a>
+        </div>
+    </nav>
+
+    <!-- =========== Main Content Section =========== -->
+    <main class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 text-center mb-4">
+                DevLUp Member Projects
+            </h1>
+            <p class="text-center text-lg text-slate-700 mb-16 max-w-2xl mx-auto">
+                Celebrating the efforts put in by DevLUp members.
+            </p>
+
+            <!-- =========== Projects Section =========== -->
+            <section id="projects" class="py-20 bg-white">
+                <div class="container mx-auto px-6">
+                    <h3 class="text-4xl font-bold text-center text-slate-900 mb-2">Member Showcase</h3>
+                    <p class="text-center text-club-garnet mb-12 text-lg font-semibold">Check out what our members have built.</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                        <!-- Project Card  -->
+                        <div class="bg-slate-100 rounded-lg shadow-xl overflow-hidden group">
+                            <img src="TempOrbitalOdysseyImage-gif.gif"
+                                 alt="Cover art for Orbital Odyssey"
+                                 class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-slate-900 mb-2">Orbital Odyssey</h4>
+                                <p class="text-slate-600 mb-4 text-sm">
+                                    A multiplayer party game.
+                                </p>
+                                <span class="inline-block bg-club-garnet text-club-gold text-xs font-semibold px-3 py-1 rounded-full mb-4">
+                                    Godot & GDScript
+                                </span>
+                                <div class="flex space-x-4">
+                                    <a href="https://github.com/devlup-fsu/party-game" target="_blank" class="text-club-garnet hover:text-[#5a2430] font-semibold">Play Now</a>
+                                    <a href="https://github.com/devlup-fsu/party-game" target="_blank" class="text-slate-500 hover:text-slate-900">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project Card  -->
+                        <div class="bg-slate-100 rounded-lg shadow-xl overflow-hidden group">
+                            <img src="RadioSixImage.png"
+                                 alt="Cover art for Radio Six"
+                                 class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-slate-900 mb-2">Radio Six</h4>
+                                <p class="text-slate-600 mb-4 text-sm">
+                                    A single player horror game.
+                                </p>
+                                <span class="inline-block bg-club-garnet text-club-gold text-xs font-semibold px-3 py-1 rounded-full mb-4">
+                                    Unity & C#
+                                </span>
+                                <div class="flex space-x-4">
+                                    <a href="https://agregory-vhs.itch.io/radio-six" target="_blank" class="text-club-garnet hover:text-[#5a2430] font-semibold">Play Now</a>
+                                    <a href="https://github.com/MitchyTh/RadioSix" target="_blank" class="text-slate-500 hover:text-slate-900">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project Card  -->
+                        <div class="bg-slate-100 rounded-lg shadow-xl overflow-hidden group">
+                            <img src="AfterEffectsIntroScreen.gif.gif"
+                                 alt="Cover art for Spider Sol"
+                                 class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-slate-900 mb-2">Spider Sol</h4>
+                                <p class="text-slate-600 mb-4 text-sm">
+                                    A single player mouse game played as a spider. Dont touch the light!
+                                </p>
+                                <span class="inline-block bg-club-garnet text-club-gold text-xs font-semibold px-3 py-1 rounded-full mb-4">
+                                    Unity & C#
+                                </span>
+                                <div class="flex space-x-4">
+                                    <a href="https://jdevo.itch.io/spidersol" target="_blank" class="text-club-garnet hover:text-[#5a2430] font-semibold">Play Now</a>
+                                    <a href="https://github.com/jdevo22/HalloweenGameJam2025" target="_blank" class="text-slate-500 hover:text-slate-900">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project Card  -->
+                        <div class="bg-slate-100 rounded-lg shadow-xl overflow-hidden group">
+                            <img src="ToastyTimeImage.png"
+                                 alt="Cover art for Toasty Time"
+                                 class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-slate-900 mb-2">Toasty Time</h4>
+                                <p class="text-slate-600 mb-4 text-sm">
+                                    Toast marshmellows before nightfall.
+                                </p>
+                                <span class="inline-block bg-club-garnet text-club-gold text-xs font-semibold px-3 py-1 rounded-full mb-4">
+                                    Unity & C#
+                                </span>
+                                <div class="flex space-x-4">
+                                    <a href="https://trikzon.itch.io/toasty-time" target="_blank" class="text-club-garnet hover:text-[#5a2430] font-semibold">Play Now</a>
+                                    <a href="https://github.com/Trikzon/toasty-time" target="_blank" class="text-slate-500 hover:text-slate-900">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project Card  -->
+                        <div class="bg-slate-100 rounded-lg shadow-xl overflow-hidden group">
+                            <img src="PartyPiratesLogo.png"
+                                 alt="Cover art for Party Privates"
+                                 class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-slate-900 mb-2">Party Pirates</h4>
+                                <p class="text-slate-600 mb-4 text-sm">
+                                    DevLUp 2023-2024 Game.
+                                </p>
+                                <span class="inline-block bg-club-garnet text-club-gold text-xs font-semibold px-3 py-1 rounded-full mb-4">
+                                    godot & GDScript
+                                </span>
+                                <div class="flex space-x-4">
+                                    <a href="https://github.com/devlup-fsu/party-pirates" target="_blank" class="text-club-garnet hover:text-[#5a2430] font-semibold">Play Now</a>
+                                    <a href="https://github.com/devlup-fsu/party-pirates" target="_blank" class="text-slate-500 hover:text-slate-900">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Card  -->
+                        <div class="bg-slate-100 rounded-lg shadow-xl overflow-hidden group">
+                            <img src="Dawn of.png"
+                                 alt="Cover art for Dawn of Dion"
+                                 class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold text-slate-900 mb-2">Dawn of Dion and the lost sprites</h4>
+                                <p class="text-slate-600 mb-4 text-sm">
+                                    Game description goes here.
+                                </p>
+                                <span class="inline-block bg-club-garnet text-club-gold text-xs font-semibold px-3 py-1 rounded-full mb-4">
+                                    Unity & C#
+                                </span>
+                                <div class="flex space-x-4">
+                                    <a href="https://github.com/jake0822/DevLUp-Project-2025-2026" target="_blank" class="text-club-garnet hover:text-[#5a2430] font-semibold">Play Now</a>
+                                    <a href="https://github.com/jake0822/DevLUp-Project-2025-2026" target="_blank" class="text-slate-500 hover:text-slate-900">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- =========== Footer =========== -->
+    <footer class="bg-club-garnet py-8">
+        <div class="container mx-auto px-6 text-center text-club-gold text-sm">
+            <p>&copy; 2025 DevLUp.</p>
+            <p>A student-run organization at Florida State University.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
