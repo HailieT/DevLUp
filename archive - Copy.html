@@ -1,0 +1,370 @@
+﻿
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Archive - DevLUp</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // UPDATED: Using official FSU colors
+                        'club-garnet': '#782F40',
+                        'club-gold': '#CEB888',
+                        'club-gold-light': '#DFD1A7', // Gulf Sands - for better contrast
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <style>
+        html {
+            color-scheme: light;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-700 font-sans antialiased">
+
+    <!-- =========== Header & Navigation =========== -->
+    <nav class="bg-club-garnet shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Club Logo/Name -->
+                <a href="DevLUpMainPage.html" class="text-2xl font-bold text-club-gold hover:text-white transition-colors">
+
+                    <img src="DevLUpLogo.png"
+                         alt="DevLUp Logo"
+                         class="w-20 h-20 ">
+
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="DevLUpMainPage.html" class="text-white hover:text-club-gold-text transition-colors">About</a>
+                    <a href="archive.html" class="text-white hover:text-club-gold-text transition-colors">Archive</a>
+                    <a href="ProjectsPage.html" class="text-white hover:text-club-gold-text transition-colors">Projects</a>
+                    <a href="BoardLegacy.html" class="text-white hover:text-club-gold-text transition-colors">Past Board</a>
+                    <a href="DevLUpMainPage.html" class="bg-club-gold text-club-garnet font-bold px-4 py-2 rounded-md text-sm hover:bg-white hover:text-club-garnet transition-all">
+                        Join Us
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white hover:text-club-gold-text focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-club-garnet bg-opacity-90">
+            <a href="DevLUpMainPage.html" class="block px-6 py-3 text-white hover:bg-black/20">About</a>
+            <a href="archive.html" class="block px-6 py-3 text-white hover:bg-black/20">Learn</a>
+            <a href="ProjectsPage.html" class="block px-6 py-3 text-white hover:bg-black/20">Projects</a>
+            <a href="BoardLegacy.html" class="block px-6 py-3 text-white hover:bg-black/20">Past Board</a>
+            <a href="DevLUpMainPage.html" class="block px-6 py-3 text-club-gold-text font-bold hover:bg-black/20">Join Us</a>
+        </div>
+    </nav>
+
+    <!-- =========== Main Content =========== -->
+    <main class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 text-center mb-4">
+                Workshop Archive
+            </h1>
+            <p class="text-center text-lg text-slate-700 mb-16 max-w-2xl mx-auto">
+                Missed a meeting? Download the slides and resources from our weekly workshops here.
+            </p>
+
+            <!-- Year 2025-2026 Section -->
+            <section class="mb-16">
+                <div class="flex items-center mb-8 border-b-4 border-club-garnet pb-2">
+                    <h2 class="text-3xl font-bold text-slate-900 mr-4">
+                        2025 - 2026
+                    </h2>
+                    <span class="bg-club-gold-text text-club-garnet text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">
+                        Current Year
+                    </span>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Workshop Item 1 -->
+                    <!-- Update the href to match your specific file name in the 2025-2026 folder -->
+                    <div class="bg-club-gold-light rounded-lg p-6 border border-club-garnet hover:border-club-gold transition-colors flex flex-col md:flex-row md:items-center justify-between group">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-club-garnet transition-colors">
+                                Week 1: Intro to DevLUp
+                            </h3>
+                            <p class="text-slate-900 text-sm mt-1">
+                                Informing new members about the club structure, upcoming events, and the board.
+                            </p>
+                            <div class="mt-2 flex items-center text-xs text-slate-900">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                September 4th, 2025
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <!-- Preview Button -->
+                            <button onclick="openPreview('2025-2026/Fall25_GBM_1.pdf')" class="inline-flex justify-center items-center px-4 py-2 bg-white border border-club-garnet text-club-garnet rounded hover:bg-club-garnet hover:text-white transition-colors font-semibold text-sm cursor-pointer">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                Preview
+                            </button>
+                           
+                                <a href="2025-2026/Fall25_GBM_1.pdf" download class="inline-flex items-center px-4 py-2 bg-slate-200 text-slate-800 rounded hover:bg-club-garnet hover:text-white transition-colors font-semibold text-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                    Download Slides
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Workshop Item 2 -->
+                        <div class="bg-club-gold-light rounded-lg p-6 border border-club-garnet hover:border-club-gold transition-colors flex flex-col md:flex-row md:items-center justify-between group">
+                            <div class="mb-4 md:mb-0">
+                                <h3 class="text-xl font-bold text-slate-900 group-hover:text-club-garnet transition-colors">
+                                    Week 2: Intro to Unity
+                                </h3>
+                                <p class="text-slate-900 text-sm mt-1">
+                                    What is Unity? Setting up the environment and creating a simple project.
+                                </p>
+                                <div class="mt-2 flex items-center text-xs text-slate-900">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                    September 11th, 2025
+                                </div>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <button onclick="openPreview('2025-2026/Fall25_GBM_2_Intro_to_Unity.pdf')" class="inline-flex justify-center items-center px-4 py-2 bg-white border border-club-garnet text-club-garnet rounded hover:bg-club-garnet hover:text-white transition-colors font-semibold text-sm cursor-pointer">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                    Preview
+                                </button>
+                                <a href="2025-2026/Fall25_GBM_2_Intro_to_Unity.pdf" download class="inline-flex items-center px-4 py-2 bg-slate-200 text-slate-800 rounded hover:bg-club-garnet hover:text-white transition-colors font-semibold text-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                    Download Slides
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Workshop Item 3 -->
+                        <div class="bg-club-gold-light rounded-lg p-6 border border-club-garnet hover:border-club-gold transition-colors flex flex-col md:flex-row md:items-center justify-between group">
+                            <div class="mb-4 md:mb-0">
+                                <h3 class="text-xl font-bold text-slate-900 group-hover:text-club-garnet transition-colors">
+                                    Week 3: Art on a budget
+                                </h3>
+                                <p class="text-slate-900 text-sm mt-1">
+                                    Showing how to find free and affordable assets for your game projects.
+                                </p>
+                                <div class="mt-2 flex items-center text-xs text-slate-900">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                    September 18th, 2025
+                                </div>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <button onclick="openPreview('2025-2026/Fall25_GBM_3_Free_Assets.pdf')" class="inline-flex justify-center items-center px-4 py-2 bg-white border border-club-garnet text-club-garnet rounded hover:bg-club-garnet hover:text-white transition-colors font-semibold text-sm cursor-pointer">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                    Preview
+                                </button>
+                                <a href="2025-2026/Fall25_GBM_3_Free_Assets.pdf" download class="inline-flex items-center px-4 py-2 bg-slate-200 text-slate-800 rounded hover:bg-club-garnet hover:text-white transition-colors font-semibold text-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                    Download Slides
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Workshop Item 4 -->
+                        <div class="bg-club-gold-light rounded-lg p-6 border border-club-garnet hover:border-club-gold transition-colors flex flex-col md:flex-row md:items-center justify-between group">
+                            <div class="mb-4 md:mb-0">
+                                <h3 class="text-xl font-bold text-slate-900 group-hover:text-club-garnet transition-colors">
+                                    Week 5: PlayStation Recruiter Session
+                                </h3>
+                                <p class="text-slate-900 text-sm mt-1">
+                                    Playstation recruiter shares insights on their summer internship program and application tips.
+                                </p>
+                                <div class="mt-2 flex items-center text-xs text-slate-900">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                    October 2nd, 2025
+                                </div>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <button onclick="openPreview('2025-2026/Fall25_GBM_5_Playstation.pdf')" class="inline-flex justify-center items-center px-4 py-2 bg-white border border-club-garnet text-club-garnet rounded hover:bg-club-garnet hover:text-white transition-colors font-semibold text-sm cursor-pointer">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                    Preview
+                                </button>
+                                <a href="2025-2026/Fall25_GBM_5_Playstation.pdf" download class="inline-flex items-center px-4 py-2 bg-slate-200 text-slate-800 rounded hover:bg-club-garnet hover:text-white transition-colors font-semibold text-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                    Download Slides
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Workshop Item 5 -->
+                        <div class="bg-club-gold-light rounded-lg p-6 border border-club-garnet hover:border-club-gold transition-colors flex flex-col md:flex-row md:items-center justify-between group">
+                            <div class="mb-4 md:mb-0">
+                                <h3 class="text-xl font-bold text-slate-900 group-hover:text-club-garnet transition-colors">
+                                    Week 7: THE ONE HOUR GAME JAM
+                                </h3>
+                                <p class="text-slate-900 text-sm mt-1">
+                                    Creating an Idea for a game in one hour.
+                                </p>
+                                <div class="mt-2 flex items-center text-xs text-slate-900">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                    October 16th, 2025
+                                </div>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <button onclick="openPreview('2025-2026/Fall25_GBM_7_THE_ONE_HOUR_GAME_JAM.pdf')" class="inline-flex justify-center items-center px-4 py-2 bg-white border border-club-garnet text-club-garnet rounded hover:bg-club-garnet hover:text-white transition-colors font-semibold text-sm cursor-pointer">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                    Preview
+                                </button>
+                                <a href="2025-2026/Fall25_GBM_7_THE_ONE_HOUR_GAME_JAM.pdf" download class="inline-flex items-center px-4 py-2 bg-slate-200 text-slate-800 rounded hover:bg-club-garnet hover:text-white transition-colors font-semibold text-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                    Download Slides
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Workshop Item 6-->
+                        <div class="bg-club-gold-light rounded-lg p-6 border border-club-garnet hover:border-club-gold transition-colors flex flex-col md:flex-row md:items-center justify-between group">
+                            <div class="mb-4 md:mb-0">
+                                <h3 class="text-xl font-bold text-slate-900 group-hover:text-club-garnet transition-colors">
+                                    Week 7.5: DevilUp Horror Jam
+                                </h3>
+                                <p class="text-slate-900 text-sm mt-1">
+                                    Weekend (48 hour) game jam focused on horror-themed games.
+                                </p>
+                                <div class="mt-2 flex items-center text-xs text-slate-900">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                    October 17th-19th, 2025
+                                </div>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <button onclick="openPreview('2025-2026/Fall2025_DevilUp_Horror_Jam_Kickoff.pdf')" class="inline-flex justify-center items-center px-4 py-2 bg-white border border-club-garnet text-club-garnet rounded hover:bg-club-garnet hover:text-white transition-colors font-semibold text-sm cursor-pointer">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                    Preview
+                                </button>
+                                <a href="2025-2026/Fall2025_DevilUp_Horror_Jam_Kickoff.pdf" download class="inline-flex items-center px-4 py-2 bg-slate-200 text-slate-800 rounded hover:bg-club-garnet hover:text-white transition-colors font-semibold text-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                    Download Slides
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Workshop Item 7 -->
+                        <div class="bg-club-gold-light rounded-lg p-6 border border-club-garnet hover:border-club-gold transition-colors flex flex-col md:flex-row md:items-center justify-between group">
+                            <div class="mb-4 md:mb-0">
+                                <h3 class="text-xl font-bold text-slate-900 group-hover:text-club-garnet transition-colors">
+                                    Week 8: Mechanics vs Narrative
+                                </h3>
+                                <p class="text-slate-900 text-sm mt-1">
+                                    Defining game mechanics and narrative, and how they interact to create engaging gameplay experiences.
+                                </p>
+                                <div class="mt-2 flex items-center text-xs text-slate-900">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                    October 23rd, 2025
+                                </div>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <button onclick="openPreview('2025-2026/Fall25_GBM_8_Mechanics_vs_Narrative.pdf')" class="inline-flex justify-center items-center px-4 py-2 bg-white border border-club-garnet text-club-garnet rounded hover:bg-club-garnet hover:text-white transition-colors font-semibold text-sm cursor-pointer">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                    Preview
+                                </button>
+                                <a href="2025-2026/Fall25_GBM_8_Mechanics_vs_Narrative.pdf" download class="inline-flex items-center px-4 py-2 bg-slate-200 text-slate-800 rounded hover:bg-club-garnet hover:text-white transition-colors font-semibold text-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                    Download Slides
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Workshop Item 8 -->
+                        <div class="bg-club-gold-light rounded-lg p-6 border border-club-garnet hover:border-club-gold transition-colors flex flex-col md:flex-row md:items-center justify-between group">
+                            <div class="mb-4 md:mb-0">
+                                <h3 class="text-xl font-bold text-slate-900 group-hover:text-club-garnet transition-colors">
+                                    Week 9: Intro to Blender
+                                </h3>
+                                <p class="text-slate-900 text-sm mt-1">
+                                    Basic introduction to Blender for 3D modeling.
+                                </p>
+                                <div class="mt-2 flex items-center text-xs text-slate-900">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                    October 30th, 2025
+                                </div>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <button onclick="openPreview('2025-2026/Fall25_GBM_9_Intro_to_Blender.pdf')" class="inline-flex justify-center items-center px-4 py-2 bg-white border border-club-garnet text-club-garnet rounded hover:bg-club-garnet hover:text-white transition-colors font-semibold text-sm cursor-pointer">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                    Preview
+                                </button>
+                                <a href="2025-2026/Fall25_GBM_9_Intro_to_Blender.pdf" download class="inline-flex items-center px-4 py-2 bg-slate-200 text-slate-800 rounded hover:bg-club-garnet hover:text-white transition-colors font-semibold text-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                    Download Slides
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Workshop Item 9 -->
+                        <div class="bg-club-gold-light rounded-lg p-6 border border-club-garnet hover:border-club-gold transition-colors flex flex-col md:flex-row md:items-center justify-between group">
+                            <div class="mb-4 md:mb-0">
+                                <h3 class="text-xl font-bold text-slate-900 group-hover:text-club-garnet transition-colors">
+                                    Week 10: The Flowchart
+                                </h3>
+                                <p class="text-slate-900 text-sm mt-1">
+                                    Linear narrative design using flowcharts.
+                                </p>
+                                <div class="mt-2 flex items-center text-xs text-slate-900">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                    November 6th, 2025
+                                </div>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <button onclick="openPreview('2025-2026/Fall25_GBM_10_The_Flowchart.pdf')" class="inline-flex justify-center items-center px-4 py-2 bg-white border border-club-garnet text-club-garnet rounded hover:bg-club-garnet hover:text-white transition-colors font-semibold text-sm cursor-pointer">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                    Preview
+                                </button>
+                                <a href="2025-2026/Fall25_GBM_10_The_Flowchart.pdf" download class="inline-flex items-center px-4 py-2 bg-slate-200 text-slate-800 rounded hover:bg-club-garnet hover:text-white transition-colors font-semibold text-sm">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                    Download Slides
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Add more workshops here by copying the blocks above -->
+
+                    </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- =========== Footer =========== -->
+    <footer class="bg-club-garnet py-8">
+        <div class="container mx-auto px-6 text-center text-club-gold text-sm">
+            <p>&copy; 2025 DevLUp @ FSU.</p>
+            <p>A student-run organization at Florida State University.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
