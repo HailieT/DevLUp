@@ -94,6 +94,17 @@
                 Preview slides instantly or download the PDF files.
             </p>
 
+            <!-- Search Bar -->
+            <div class="max-w-md mx-auto mb-12">
+                <div class="relative">
+                    <input type="text" id="search-input" placeholder="Search workshops..."
+                           class="w-full px-4 py-3 pl-10 border-2 border-club-garnet rounded-lg focus:outline-none focus:border-club-gold transition-colors text-slate-700">
+                    <svg class="w-5 h-5 text-club-garnet absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+            </div>
+
             <!-- Year 2025-2026 Section -->
             <section class="mb-16">
                 <div class="flex items-center mb-8 border-b-4 border-club-garnet pb-2">
@@ -1191,6 +1202,16 @@
             if (event.key === "Escape" && !modal.classList.contains('hidden')) {
                 closePreview();
             }
+        });
+
+        // Search functionality
+        document.getElementById('search-input').addEventListener('input', function () {
+            const query = this.value.toLowerCase();
+            const items = document.querySelectorAll('.space-y-4 > div');
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(query) ? '' : 'none';
+            });
         });
     </script>
 </body>
