@@ -22,8 +22,10 @@
   font-family: "Sora";
   color: var(--text);
   background: var(--bg);
-  min-height: 600px;
+  min-height: 100vh;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
@@ -518,6 +520,7 @@
   text-align: center;
   padding: 1.25rem 1rem;
   font-size: 0.85rem;
+  margin-top: auto;
 }
 
 .site-footer-links {
