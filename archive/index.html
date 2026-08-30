@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshop Archive - DevLUp @ FSU</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="../favicon.ico">
+</head>
+<body>
+
+<div class="page">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="../assets/images/devlup/DevLUpLogo.png" class="brand-icon" alt="DevLUp Logo">
+      <span>DevLUp @ FSU</span>
+    </div>
+    <ul class="navbar-links">
+      <li><a href="../">Home</a></li>
+      <li><a href="../projects/">Projects</a></li>
+      <li><a href="../board/">Board</a></li>
+      <li><a href="./" class="active">Archive</a></li>
+      <li><a href="https://discord.gg/jehBXnYVpR">Join us</a></li>
+    </ul>
+  </nav>
+
+  <div class="archive-hero">
+    <div class="archive-hero-content">
+      <h1>Workshop Archive</h1>
+      <p>Preview slides instantly or download the PDF files.</p>
+    </div>
+  </div>
+
+  <div class="archive-main">
+    <div class="archive-search">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+      </svg>
+      <input type="text" id="search-input" placeholder="Search workshops..." aria-label="Search workshops">
+    </div>
+
+    <div id="archive-container"></div>
+  </div>
+</div>
+
+<!-- Preview Modal -->
+<div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-label="Slide preview">
+  <div class="modal-box">
+    <div class="modal-header">
+      <span>Slide Preview</span>
+      <button class="modal-close" id="modal-close" aria-label="Close preview">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <iframe class="modal-frame" id="modal-frame" src="" title="PDF Preview"></iframe>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('modal');
+  const modalFrame = document.getElementById('modal-frame');
+
+  function openPreview(fileUrl) {
+    modalFrame.src = fileUrl;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePreview() {
+    modal.classList.remove('open');
+    modalFrame.src = '';
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('modal-close').addEventListener('click', closePreview);
+
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) closePreview();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closePreview();
+  });
+
+  document.getElementById('archive-container').addEventListener('click', function (e) {
+    const btn = e.target.closest('.btn-preview');
+    if (btn) openPreview(btn.dataset.file);
+  });
+
+  function escHtml(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function renderArchive(data, query) {
+    const container = document.getElementById('archive-container');
+    const q = query ? query.toLowerCase() : '';
+    let html = '';
+    let anyVisible = false;
+
+    for (const yearGroup of data) {
+      const filtered = q
+        ? yearGroup.entries.filter(e =>
+            e.title.toLowerCase().includes(q) ||
+            e.description.toLowerCase().includes(q) ||
+            e.date.toLowerCase().includes(q)
+          )
+        : yearGroup.entries;
+
+      if (filtered.length === 0) continue;
+      anyVisible = true;
+
+      html += `
+        <section class="archive-year">
+          <div class="archive-year-header">
+            <h2>${escHtml(yearGroup.year)}</h2>
+            ${yearGroup.current ? '<span class="current-badge">Current Year</span>' : ''}
+          </div>
+          <div class="archive-year-entries">
+            ${filtered.map(entry => `
+              <div class="archive-card">
+                <div class="archive-card-info">
+                  <h3>${escHtml(entry.title)}</h3>
+                  <p>${escHtml(entry.description)}</p>
+                  <span class="archive-card-date">${escHtml(entry.date)}</span>
+                </div>
+                <div class="archive-card-actions">
+                  <button class="btn-preview" data-file="${escHtml(entry.file)}">Preview</button>
+                  <a class="btn-download" href="${escHtml(entry.file)}" download target="_blank" rel="noopener noreferrer">Download</a>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </section>
+      `;
+    }
+
+    if (!anyVisible) {
+      html = '<p class="archive-empty">No workshops found.</p>';
+    }
+
+    container.innerHTML = html;
+  }
+
+  async function loadArchive() {
+    const res = await fetch('archive.json');
+    const data = await res.json();
+
+    renderArchive(data);
+
+    document.getElementById('search-input').addEventListener('input', function () {
+      renderArchive(data, this.value);
+    });
+  }
+
+  loadArchive();
+</script>
+
+</body>
+</html>

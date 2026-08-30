@@ -1,0 +1,318 @@
+/* ===== Archive Hero ===== */
+.archive-hero {
+  background: linear-gradient(135deg, var(--garnet-dark) 0%, var(--garnet) 60%, var(--garnet-light) 100%);
+  padding: 2.5rem 1.5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.archive-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 30px, rgba(206, 184, 136, 0.04) 30px, rgba(206, 184, 136, 0.04) 31px);
+}
+
+.archive-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.archive-hero h1 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.archive-hero p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* ===== Archive Main ===== */
+.archive-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* ===== Search ===== */
+.archive-search {
+  max-width: 420px;
+  margin: 0 auto 2.5rem;
+  position: relative;
+}
+
+.archive-search input {
+  width: 100%;
+  padding: 10px 14px 10px 38px;
+  border: 1.5px solid var(--garnet);
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  background: var(--bg);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.archive-search input:focus {
+  border-color: var(--gold);
+}
+
+.archive-search svg {
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: var(--garnet);
+  pointer-events: none;
+}
+
+/* ===== Year Section ===== */
+.archive-year {
+  margin-bottom: 3rem;
+}
+
+.archive-year-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 3px solid var(--garnet);
+  padding-bottom: 8px;
+  margin-bottom: 1.25rem;
+}
+
+.archive-year-header h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+
+.current-badge {
+  background: var(--gold-light);
+  color: var(--garnet-dark);
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.archive-year-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ===== Archive Card ===== */
+.archive-card {
+  background: var(--gold-light);
+  border: 0.5px solid var(--gold);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+
+.archive-card:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border-color: var(--gold);
+}
+
+.archive-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.archive-card-info h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.archive-card-info p {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.archive-card-date {
+  font-size: 11px;
+  color: var(--garnet);
+  font-weight: 500;
+}
+
+.archive-card-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.btn-preview {
+  padding: 7px 14px;
+  border: 1.5px solid var(--garnet);
+  background: var(--bg);
+  color: var(--garnet);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.btn-preview:hover {
+  background: var(--garnet);
+  color: #fff;
+}
+
+.btn-download {
+  padding: 7px 14px;
+  border: 1.5px solid var(--border);
+  background: var(--bg2);
+  color: var(--text);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-download:hover {
+  background: var(--garnet);
+  color: #fff;
+  border-color: var(--garnet);
+}
+
+/* ===== Empty state ===== */
+.archive-empty {
+  text-align: center;
+  padding: 3rem 0;
+  color: var(--text2);
+  font-size: 15px;
+}
+
+/* ===== Preview Modal ===== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(3px);
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal-box {
+  background: var(--bg);
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  width: 100%;
+  max-width: 960px;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: "Sora", sans-serif;
+}
+
+.modal-header {
+  background: var(--garnet);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.modal-header span {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.02em;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.modal-close svg {
+  width: 22px;
+  height: 22px;
+}
+
+.modal-frame {
+  flex: 1;
+  width: 100%;
+  border: none;
+  background: #555;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .archive-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .archive-card-actions {
+    width: 100%;
+  }
+
+  .btn-preview,
+  .btn-download {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .archive-year-header h2 {
+    font-size: 18px;
+  }
+
+  .navbar {
+    padding: 0 1.25rem;
+  }
+}
