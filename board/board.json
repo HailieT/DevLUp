@@ -10,14 +10,14 @@
       "year": "2026 - 2027",
       "current": true,
       "members": [
-        { "name": "Hailie Tucker",     "role": "President",           "image": "../assets/images/board/HailieTuckerImage.jpg",          "url": "https://hailiet.github.io/Hailie_Website/" },
+        { "name": "Hailie Tucker",     "role": "President",           "image": "../assets/images/board/HailieTuckerImage.jpg",          "url": "https://hailietucker.com/" },
         { "name": "Yusong Liang",      "role": "Vice President",      "image": "../assets/images/board/YusongLiangImage.jpg",           "url": "https://www.linkedin.com/in/yusong-liang/" },
         { "name": "Ashiyah Meide",     "role": "Secretary",           "image": "../assets/images/board/Ashiyah_Meide_image.jpg",        "url": "https://www.linkedin.com/in/ashiyah-meide-b08747307/" },
         { "name": "Sean McGill",       "role": "Treasurer",           "image": "../assets/images/board/Sean_McGill_Image.jpg",          "url": "https://www.linkedin.com/in/sean-mcgill-010172298/" },
         { "name": "Laura Diez",        "role": "Social Chair",        "image": "../assets/images/board/Laura_Diez_Image.png",           "url": "https://www.linkedin.com/in/laura-diez-8135903a7/" },
         { "name": "Marco Castaño",     "role": "Marketing Chair",     "image": "../assets/images/board/Marco_image.jpg",                "url": "https://www.linkedin.com/in/marco-casta%C3%B1o-165087406/" },
         { "name": "Kaydence Montenegro","role": "Creative Chair",     "image": "../assets/images/board/Kaydence_Montenegro_Image.png",  "url": "https://www.linkedin.com/in/kaydence-montenegro-a8852a376/" },
-        { "name": "Miles Burkart",     "role": "Webmaster",           "image": "../assets/images/board/Miles_Burkart_Image.jpg",        "url": "https://www.linkedin.com/in/miles-burkart-6aba16328/" },
+        { "name": "Miles Burkart",     "role": "Webmaster",           "image": "../assets/images/board/Miles_Burkart_Image.jpg",        "url": "https://7limes.github.io/" },
         { "name": "Ares Gregory",      "role": "Project Facilitator", "image": "../assets/images/board/AresGregoryImage.jpg",           "url": "https://www.linkedin.com/in/ares-gregory-a464aa320/" },
         { "name": "Mitchell Thai",     "role": "Event Coordinator",   "image": "../assets/images/board/Mitchell_thai_image.jpg",        "url": "https://www.linkedin.com/in/mitchell-thai-218512345/" }
       ]
