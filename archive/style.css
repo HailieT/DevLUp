@@ -298,6 +298,19 @@
     align-items: flex-start;
   }
 
+  .archive-main {
+    padding: 2rem 0.5rem;
+    margin: 0;
+  }
+
+  .archive-search {
+    margin: 0 0 2.5rem;
+  }
+
+  .archive-card-info {
+    width: 100%;
+  }
+
   .archive-card-actions {
     width: 100%;
   }
