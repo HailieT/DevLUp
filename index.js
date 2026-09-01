@@ -1,37 +1,9 @@
-const projects = [
-  {
-    tag: "3D Platformer",
-    title: "Dawn of Dion and the Lost Sprites",
-    desc: "A magical 3D platforming adventure spanning multiple diverse levels.",
-    authors: ["DevLUp FSU"],
-    year: "2025",
-    bg: "linear-gradient(135deg, #000000 0%, #000000 100%)",
-    art_link: "assets/images/projects/dawn-of-dion.png",
-    link: "https://jake0822.itch.io/dawn-of-dion"
-  },
-  {
-    tag: "Party",
-    title: "Orbital Odyssey",
-    desc: "A multiplayer party game.",
-    authors: ["DevLUp FSU"],
-    year: "2024",
-    bg: "linear-gradient(135deg, #1a1a2e 0%, #2a1a3a 100%)",
-    art_link: "assets/images/projects/orbital-odyssey.gif",
-    link: "https://github.com/devlup-fsu/party-game"
-  },
-  {
-    tag: "Horror",
-    title: "Radio Six",
-    desc: "Traverse through the hospital basement to the exit. You'll need to borrow 4 access cards from your coworkers to unlock the door.",
-    authors: ["Jake Y.", "Ares G.", "Mitchell T.", "Donovyn G.", "Camryn W.", "David B.", "Julian O."],
-    year: "2025",
-    bg: "linear-gradient(135deg, #4a1a00 0%, #782f40 100%)",
-    art_link: "assets/images/projects/RadioSix.png",
-    link: "https://agregory-vhs.itch.io/radio-six"
-  }
-];
-
+let projects = [];
 let current = 0;
+
+fetch('featured_projects.json')
+  .then(r => r.json())
+  .then(data => { projects = data; renderProject(); });
 
 function renderProject() {
   const p = projects[current];
@@ -66,8 +38,6 @@ function viewProject() {
   const link = projects[current].link;
   if (link) window.open(link, '_blank', 'noopener,noreferrer');
 }
-
-renderProject();
 
 document.querySelector('.navbar-toggle').addEventListener('click', function() {
   document.querySelector('.navbar').classList.toggle('open');
