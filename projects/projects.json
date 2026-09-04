@@ -1,7 +1,7 @@
 [
   {
     "title": "Orbital Odyssey",
-    "description": "A multiplayer party game.",
+    "description": "A four player space themed party game.",
     "tags": ["Godot", "GDScript"],
     "image": "../assets/images/projects/TempOrbitalOdysseyImage-gif.gif",
     "playUrl": "https://github.com/devlup-fsu/party-game",
@@ -41,7 +41,7 @@
   },
   {
     "title": "Dawn of Dion and the Lost Sprites",
-    "description": "Game description goes here.",
+    "description": "A magical 3D platforming adventure spanning multiple diverse levels.",
     "tags": ["Unity", "C#"],
     "image": "../assets/images/projects/Dawn of.png",
     "playUrl": "https://jake0822.itch.io/dawn-of-dion",
